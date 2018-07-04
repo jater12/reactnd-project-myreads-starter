@@ -19,14 +19,16 @@ class SearchPage extends Component {
 			BooksAPI.search(query)
 			.then((books) => {
 				var newBooks = []
-				books.map((book) => {
-					if (this.props.bookshelves.has(book.id) ) {
-						newBooks.push(this.props.bookshelves.get(book.id))
-					} else {
-						book.shelf="none"
-						newBooks.push(book)
-					}
-				})
+				if(books.constructor === Array) {
+					books.map((book) => {
+						if (this.props.bookshelves.has(book.id) ) {
+							newBooks.push(this.props.bookshelves.get(book.id))
+						} else {
+							book.shelf="none"
+							newBooks.push(book)
+						}
+					})
+				}
 				this.setState({
 					queriedBooks: newBooks
 				})

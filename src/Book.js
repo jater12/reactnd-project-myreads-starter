@@ -45,9 +45,9 @@ class Book extends Component {
 		            <option value="move" disabled>Move to...</option>
 					{values.map((option) => {
 							if (option.key===this.props.book.shelf){
-								return(<option value={option.key} selected>{option.value}</option>)
+								return(<option key={option.key} value={option.key} selected>{option.value}</option>)
 							} else {
-								return(<option value={option.key}>{option.value}</option>)
+								return(<option key={option.key} value={option.key}>{option.value}</option>)
 							}
 						})}		            
 		          </select>
