@@ -90,3 +90,9 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 This repository is the starter code for _all_ Udacity students. Therefore, we most likely will not accept pull requests.
 
 For details, check out [CONTRIBUTING.md](CONTRIBUTING.md).
+
+## Project Description
+This project displays books that is loaded from a server and allows the user to assign books to certain shelves. It supports querying
+
+## Installing Prorject
+Run npm start and npm install
